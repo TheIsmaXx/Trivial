@@ -68,4 +68,9 @@ public class TrivialTests {
 
         Assertions.assertFalse(esjugable);
     }
+
+    @Test
+    public void salir_Carcel(){
+
+    }
 }

@@ -166,7 +166,10 @@ public class Game {
 
 
     private boolean jugadorHaGanado() {
-        return !(monederos[jugadorActual] == 6);
+        if(monederos[jugadorActual] == 6){
+            return true;
+        }
+        return false;
     }
 
     public String nuevaPosicionJugador() {

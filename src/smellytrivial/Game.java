@@ -31,7 +31,12 @@ public class Game {
     }
 
     public boolean esJugable() {
-        return (cuantosJugadores() >= 2);
+        if(cuantosJugadores() >= 2){
+            return true;
+        }else{
+            System.out.println("Debe haber 2 o más jugadores");
+            return false;
+        }
     }
 
     public boolean agregar(String playerName) {

@@ -90,14 +90,22 @@ public class Game {
     }
 
     private void hacerPregunta() {
-        if (categoriaActual() == "Cultura popular")
-            System.out.println(preguntasCultura.removeFirst());
-        if (categoriaActual() == "Ciencias")
-            System.out.println(preguntasCiencias.removeFirst());
-        if (categoriaActual() == "Deportes")
-            System.out.println(preguntasDeportes.removeFirst());
-        if (categoriaActual() == "Música")
-            System.out.println(preguntasMusica.removeFirst());
+        int contador = 0;
+        while (contador != 1000){
+            if (categoriaActual() == "Cultura popular")
+                contador = contador + 1;
+                System.out.println(preguntasCultura.removeFirst());
+            if (categoriaActual() == "Ciencias")
+                contador = contador + 1;
+                System.out.println(preguntasCiencias.removeFirst());
+            if (categoriaActual() == "Deportes")
+                contador = contador + 1;
+                System.out.println(preguntasDeportes.removeFirst());
+            if (categoriaActual() == "Música")
+                contador = contador + 1;
+                System.out.println(preguntasMusica.removeFirst());
+        }
+        System.out.println("Se acabaron las preguntas, lo has dado todo! buena partida!");
     }
 
 

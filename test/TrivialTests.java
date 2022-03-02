@@ -51,4 +51,21 @@ public class TrivialTests {
 
         Assertions.assertTrue(esjugable);
     }
+
+    @Test
+    public void mas_de_6_jugadores(){
+        Game sut = new Game();
+
+        sut.agregar("María");
+        sut.agregar("Juan");
+        sut.agregar("Pedro");
+        sut.agregar("Paco");
+        sut.agregar("Pablo");
+        sut.agregar("Ismael");
+        sut.agregar("Javier");
+
+        boolean esjugable = sut.esJugable();
+
+        Assertions.assertFalse(esjugable);
+    }
 }

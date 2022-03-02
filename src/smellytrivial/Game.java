@@ -31,7 +31,7 @@ public class Game {
     }
 
     public boolean esJugable() {
-        if(cuantosJugadores() >= 2){
+        if(cuantosJugadores() >= 2 && cuantosJugadores()<= 6){
             return true;
         }else{
             System.out.println("Debe haber 2 o más jugadores");
@@ -41,8 +41,9 @@ public class Game {
 
     public boolean agregar(String playerName) {
 
-
-        jugadores.add(playerName);
+        for (int x = 0; x<jugadores.size(); x++){
+            jugadores.add(playerName);
+        }
         posiciones[cuantosJugadores()] = 0;
         monederos[cuantosJugadores()] = 0;
         enCasillaCastigo[cuantosJugadores()] = false;

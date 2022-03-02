@@ -125,13 +125,11 @@ public class Game {
                         + " monedas doradas.");
 
                 boolean ganador = jugadorHaGanado();
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+                siguienteJugador();
 
                 return ganador;
             } else {
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+                siguienteJugador();
                 return true;
             }
 
@@ -147,11 +145,15 @@ public class Game {
                     + " monedas doradas.");
 
             boolean ganador = jugadorHaGanado();
-            jugadorActual++;
-            if (jugadorActual == jugadores.size()) jugadorActual = 0;
+            siguienteJugador();
 
             return ganador;
         }
+    }
+
+    private void siguienteJugador() {
+        jugadorActual++;
+        if (jugadorActual == jugadores.size()) jugadorActual = 0;
     }
 
     public boolean respuestaIncorrecta(){

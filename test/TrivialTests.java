@@ -12,4 +12,19 @@ public class TrivialTests {
     public void crear_Game(){
         Game trivial = new Game();
     }
+
+    @Test
+    public void si_al_principio_saco_un_1_voy_a_casilla_1(){
+        Game sut = new Game();
+        sut.agregar("María");
+        sut.agregar("Juan");
+
+        sut.tirarDado(1);
+
+        String expected = "La nueva posición de María es 1";
+
+        String actual = sut.nuevaPosicionJugador();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
